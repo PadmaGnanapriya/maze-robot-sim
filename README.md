@@ -32,6 +32,7 @@ npm run build      # typecheck, then a production build in dist/
 npm run typecheck  # tsc --noEmit
 npm run lint       # eslint .
 npm run bench      # run the default solver on 24 random mazes, no browser needed
+npm run golden     # regression check for engine features the default solver doesn't exercise
 ```
 
 `npm run bench -- --size 8 --cell 50 --seeds 20 --types backtracker,prim,braid` changes the maze size, wall gap and maze types.
@@ -60,15 +61,15 @@ The build fills in the link-preview tags with your site's address, so a shared l
 
 ```
 maze_solver.ino + config.h
-        │  engine/parser.js     preprocess, tokenise, parse to an AST
+        │  engine/parser.ts     preprocess, tokenise, parse to an AST
         ▼
       AST
-        │  engine/compiler.js   closures; code that can block becomes generators
+        │  engine/compiler.ts   closures; code that can block becomes generators
         ▼
- main() generator ──runs on──▶ engine/mcu.js   pins, PWM, L298N, sonar timing, Serial
+ main() generator ──runs on──▶ engine/mcu.ts   pins, PWM, L298N, sonar timing, Serial
                                      │ motor duty          ▲ echo times
                                      ▼                     │
-                               engine/world.js   physics, collisions, sonar raycasts
+                               engine/world.ts   physics, collisions, sonar raycasts
                                      │
 sim/SimController.ts  ◀── tick(dt) ── three/SceneView.ts   draws the scene every frame
         │  subscribe / getSnapshot
@@ -78,7 +79,9 @@ sim/SimController.ts  ◀── tick(dt) ── three/SceneView.ts   draws the s
 
 Every frame, the controller runs the sketch until the virtual Uno's clock reaches the end of the frame, then advances the physics to the same moment. `delay()`, `pulseIn()` and loops yield, so a sketch with `while (true)` doesn't freeze the page.
 
-The engine has no DOM or React dependency. `scripts/bench.js` imports it directly in Node.
+The engine has no DOM or React dependency. `scripts/bench.js` imports it directly in Node (via [tsx](https://github.com/privatenumber/tsx), since Node itself doesn't run `.ts` files).
+
+The whole app - engine included - is TypeScript. `scripts/golden.js` (`npm run golden`) is a second regression check alongside bench: it compiles and runs a handful of small sketches covering language features the default solver never exercises (structs, enum class, overload resolution, static locals, String methods, NewPing timing) and diffs the result against a committed snapshot.
 
 ## Project structure
 
@@ -91,7 +94,8 @@ src/
   components/    React UI: top bar, stage overlays, editor, output, settings tabs
   hooks/         useSim (controller state), useTicker, shortcuts, media queries
   styles/        design tokens and layout CSS
-scripts/bench.js headless solver benchmark (also used by CI)
+scripts/bench.js   headless solver benchmark (also used by CI)
+scripts/golden.js  regression snapshot for engine features the solver doesn't exercise
 ```
 
 In a dev build, `window.mazeSim` is the controller, so you can poke at the simulation from the browser console, for example `mazeSim.world.pose` or `mazeSim.setUi({ speed: 8 })`. It isn't exposed in production builds.
