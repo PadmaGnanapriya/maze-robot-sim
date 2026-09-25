@@ -28,7 +28,7 @@ jobs:
       - id: pages
         uses: actions/configure-pages@v5
       - run: npm ci
-      - name: Check that the default solver still solves mazes
+      - name: Typecheck, lint, and check that the default solver still solves mazes
         run: npm test
       - name: Build
         run: npm run build

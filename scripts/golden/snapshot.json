@@ -1,0 +1,676 @@
+[
+  {
+    "name": "structs-2d-arrays",
+    "ok": true,
+    "ram": 208,
+    "warnings": [],
+    "serial": "21\r\n21\r\n",
+    "runtimeLogs": [],
+    "finalT": 200001.55000031364,
+    "pins": [
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      }
+    ]
+  },
+  {
+    "name": "enum-class-switch",
+    "ok": true,
+    "ram": 200,
+    "warnings": [],
+    "serial": "run\r\nstop\r\n",
+    "runtimeLogs": [],
+    "finalT": 200001.60000031363,
+    "pins": [
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      }
+    ]
+  },
+  {
+    "name": "overloads-defaults-refs-static",
+    "ok": true,
+    "ram": 186,
+    "warnings": [],
+    "serial": "6\r\n15\r\n7\r\n42\r\n1\r\n2\r\n3\r\n",
+    "runtimeLogs": [],
+    "finalT": 200000.90000031362,
+    "pins": [
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      }
+    ]
+  },
+  {
+    "name": "string-methods",
+    "ok": true,
+    "ram": 247,
+    "warnings": [],
+    "serial": "15\r\n7\r\nArduino!\r\nHELLO, ARDUINO!\r\nHELLO, WORLD!\r\ntrim me\r\nyes\r\n",
+    "runtimeLogs": [],
+    "finalT": 200001.00000031362,
+    "pins": [
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      }
+    ]
+  },
+  {
+    "name": "bitops-overflow-divzero-fmacro",
+    "ok": true,
+    "ram": 184,
+    "warnings": [
+      {
+        "msg": "division by zero [-Wdiv-by-zero]",
+        "file": "test.ino",
+        "line": 16,
+        "kind": "warning"
+      }
+    ],
+    "serial": "boot\r\n40\r\n32\r\n20\r\n-5536\r\n-1\r\n",
+    "runtimeLogs": [
+      {
+        "kind": "warn",
+        "msg": "test.ino:16: integer division by zero (the result is garbage on a real Uno)"
+      }
+    ],
+    "finalT": 200000.70000031363,
+    "pins": [
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      }
+    ]
+  },
+  {
+    "name": "array-oob-warning",
+    "ok": true,
+    "ram": 194,
+    "warnings": [],
+    "serial": "0\r\n",
+    "runtimeLogs": [
+      {
+        "kind": "warn",
+        "msg": "test.ino:6: array index 10 is out of bounds (the array has 5 elements). A real Uno would silently read or overwrite other variables here."
+      }
+    ],
+    "finalT": 200000.15000031362,
+    "pins": [
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      }
+    ]
+  },
+  {
+    "name": "analogwrite-pin-wrap",
+    "ok": true,
+    "ram": 184,
+    "warnings": [],
+    "serial": "",
+    "runtimeLogs": [
+      {
+        "kind": "warn",
+        "msg": "analogWrite(D9, 300): values outside 0–255 wrap around on a real Uno (300 acts like 44). Clamp with constrain(value, 0, 255)."
+      },
+      {
+        "kind": "warn",
+        "msg": "analogWrite(D3, -5): values outside 0–255 wrap around on a real Uno (-5 acts like 251). Clamp with constrain(value, 0, 255)."
+      }
+    ],
+    "finalT": 200000.20000031363,
+    "pins": [
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 1,
+        "out": 0,
+        "pwm": 251
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 1,
+        "out": 1,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      }
+    ]
+  },
+  {
+    "name": "newping-delay-loop",
+    "ok": true,
+    "ram": 192,
+    "warnings": [],
+    "serial": "49\r\n49\r\n49\r\n49\r\n49\r\n",
+    "runtimeLogs": [],
+    "finalT": 2016388.8411162607,
+    "pins": [
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      },
+      {
+        "mode": 0,
+        "out": 0,
+        "pwm": -1
+      }
+    ]
+  }
+]

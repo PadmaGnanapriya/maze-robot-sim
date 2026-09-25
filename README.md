@@ -28,7 +28,9 @@ You need Node.js 20.19 or newer.
 ```bash
 npm install
 npm run dev        # http://localhost:5173
-npm run build      # production build in dist/
+npm run build      # typecheck, then a production build in dist/
+npm run typecheck  # tsc --noEmit
+npm run lint       # eslint .
 npm run bench      # run the default solver on 24 random mazes, no browser needed
 ```
 
@@ -68,7 +70,7 @@ maze_solver.ino + config.h
                                      ▼                     │
                                engine/world.js   physics, collisions, sonar raycasts
                                      │
-sim/SimController.js  ◀── tick(dt) ── three/SceneView.js   draws the scene every frame
+sim/SimController.ts  ◀── tick(dt) ── three/SceneView.ts   draws the scene every frame
         │  subscribe / getSnapshot
         ▼
    React components (src/components)
@@ -92,7 +94,7 @@ src/
 scripts/bench.js headless solver benchmark (also used by CI)
 ```
 
-`window.mazeSim` is the controller, so you can poke at the simulation from the browser console, for example `mazeSim.world.pose` or `mazeSim.setUi({ speed: 8 })`.
+In a dev build, `window.mazeSim` is the controller, so you can poke at the simulation from the browser console, for example `mazeSim.world.pose` or `mazeSim.setUi({ speed: 8 })`. It isn't exposed in production builds.
 
 ## Arduino C++ support
 
