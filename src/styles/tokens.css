@@ -1,0 +1,45 @@
+/* Design tokens: PCB solder-mask navy, silkscreen white, TT-motor yellow for the one primary action,
+   brass for selection, and one colour per sonar (front cyan, left orange, right violet). */
+:root {
+  color-scheme: light;
+  --bg: #E3ECEF; --panel: #F6F9FA; --raised: #FFFFFF; --sunk: #DAE5E9; --line: #C4D4DB; --line-strong: #97AFBB;
+  --text: #0E2A3B; --muted: #43616F; --faint: #718C99;
+  --yellow: #F2C230; --yellow-edge: #C79A12; --on-yellow: #1F1800;
+  --brass: #8E6B25; --ok: #1B8A57; --err: #C0392F; --warn: #936000; --note: #2C68AA;
+  --sF: #0A8CA6; --sL: #CF5A14; --sR: #7549CC;
+  --stage: #CFDDE3; --focus: #0E2A3B; --hud: rgba(246, 249, 250, 0.9);
+  --code-bg: #FBFDFD; --code-text: #16303F; --gutter: #EEF3F5; --sel: rgba(242, 194, 48, 0.35);
+  --c-kw: #8A3FB8; --c-ty: #0B7584; --c-fn: #A65200; --c-str: #2B7A31; --c-num: #B8175A; --c-com: #7A919C; --c-pp: #5361B8; --c-cn: #0A68AE; --c-ob: #0B7584;
+  --err-bg: rgba(192, 57, 47, 0.12); --warn-bg: rgba(147, 96, 0, 0.12);
+  --shadow: 0 1px 0 rgba(14, 42, 59, 0.05), 0 10px 30px -14px rgba(14, 42, 59, 0.35);
+  --r-s: 4px; --r-m: 7px; --r-l: 12px;
+  --ui: "Barlow", "Segoe UI", system-ui, sans-serif;
+  --ui-narrow: "Barlow Semi Condensed", "Barlow", "Segoe UI", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #0A1D2A; --panel: #0E2636; --raised: #143246; --sunk: #091925; --line: #1D4356; --line-strong: #2C5D76;
+    --text: #E6EFF2; --muted: #9AB4C2; --faint: #658799;
+    --brass: #D4AF67; --ok: #5AD39C; --err: #FF7B72; --warn: #FFC65A; --note: #88C0FF;
+    --sF: #4FD1E8; --sL: #FF8A3D; --sR: #B98CFF;
+    --stage: #07161F; --focus: #F2C230; --hud: rgba(12, 34, 49, 0.88);
+    --code-bg: #0A1B26; --code-text: #D6E4EA; --gutter: #0C2130; --sel: rgba(242, 194, 48, 0.28);
+    --c-kw: #D3A4FF; --c-ty: #5CD2DF; --c-fn: #FFC56B; --c-str: #9DE28F; --c-num: #FF9EC3; --c-com: #5D8193; --c-pp: #A6B2FF; --c-cn: #82C9FF; --c-ob: #5CD2DF;
+    --err-bg: rgba(255, 123, 114, 0.14); --warn-bg: rgba(255, 198, 90, 0.12);
+    --shadow: 0 1px 0 rgba(0, 0, 0, 0.3), 0 14px 34px -14px rgba(0, 0, 0, 0.7);
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0A1D2A; --panel: #0E2636; --raised: #143246; --sunk: #091925; --line: #1D4356; --line-strong: #2C5D76;
+  --text: #E6EFF2; --muted: #9AB4C2; --faint: #658799;
+  --brass: #D4AF67; --ok: #5AD39C; --err: #FF7B72; --warn: #FFC65A; --note: #88C0FF;
+  --sF: #4FD1E8; --sL: #FF8A3D; --sR: #B98CFF;
+  --stage: #07161F; --focus: #F2C230; --hud: rgba(12, 34, 49, 0.88);
+  --code-bg: #0A1B26; --code-text: #D6E4EA; --gutter: #0C2130; --sel: rgba(242, 194, 48, 0.28);
+  --c-kw: #D3A4FF; --c-ty: #5CD2DF; --c-fn: #FFC56B; --c-str: #9DE28F; --c-num: #FF9EC3; --c-com: #5D8193; --c-pp: #A6B2FF; --c-cn: #82C9FF; --c-ob: #5CD2DF;
+  --err-bg: rgba(255, 123, 114, 0.14); --warn-bg: rgba(255, 198, 90, 0.12);
+  --shadow: 0 1px 0 rgba(0, 0, 0, 0.3), 0 14px 34px -14px rgba(0, 0, 0, 0.7);
+}

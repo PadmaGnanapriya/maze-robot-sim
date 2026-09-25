@@ -1,0 +1,27 @@
+{
+  "name": "maze-robot-sim",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Arduino maze-solving robot simulator: real Arduino C++ compiled in the browser, driving a 3-sonar robot through a 3D maze.",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "bench": "node scripts/bench.js",
+    "test": "node scripts/bench.js --seeds 3 --strict"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "three": "^0.186.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.0",
+    "vite": "^8.0.0"
+  },
+  "engines": {
+    "node": ">=20.19"
+  }
+}
