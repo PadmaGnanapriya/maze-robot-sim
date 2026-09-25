@@ -5,7 +5,7 @@
  */
 import * as THREE from 'three';
 import type { CameraView } from '../sim/settings.js';
-import type { World } from '../engine/world.js';
+import type { World } from '../engine';
 
 const clamp = (v: number, a: number, b: number) => (v < a ? a : v > b ? b : v);
 const V_HALF = 21 * Math.PI / 180;   // half of the 42 degree vertical field of view

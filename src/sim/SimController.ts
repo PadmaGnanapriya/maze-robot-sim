@@ -5,7 +5,7 @@
  * React reads it through `subscribe` / `getSnapshot` (see useSim.ts). The 3D view listens
  * for 'maze', 'robot', 'goal' and 'fit' events and calls `tick(dt)` once per frame.
  */
-import { World, MCU, Maze, compileSketch, generateMaze, DEFAULT_ROBOT, CompileError, RuntimeFault, type CompiledProgram } from '../engine/index.js';
+import { World, MCU, Maze, compileSketch, generateMaze, DEFAULT_ROBOT, CompileError, RuntimeFault, type CompiledProgram } from '../engine';
 import inoSource from '../sketch/maze_solver.ino?raw';
 import configSource from '../sketch/config.h?raw';
 import { loadRaw, save } from './storage.js';
@@ -160,7 +160,14 @@ export class SimController {
     this.emit();
   }
   setActiveFile(name: string): void { this.activeFile = name; this.emit(); }
-  restoreFile(name: string): void { this.setFile(name, DEFAULT_SKETCH[name] ?? ''); this.note(`${name} is back to the default solver.`); }
+  restoreFile(name: string): void {
+    this.setFile(name, DEFAULT_SKETCH[name] ?? '');
+    // Persist immediately so a quick reload/close doesn't lose the restored default.
+    try { save('files', this.files); } catch {
+      /* ignore storage failures */
+    }
+    this.note(`${name} is back to the default solver.`);
+  }
   openFile(fileName: string, text: string): void {
     const target = /\.h$/i.test(fileName) ? 'config.h' : 'maze_solver.ino';
     this.activeFile = target;

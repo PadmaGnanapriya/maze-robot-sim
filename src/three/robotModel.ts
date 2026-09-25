@@ -9,9 +9,9 @@
  * The group origin is the midpoint of the wheel axle, on the floor.
  */
 import * as THREE from 'three';
-import { robotGeometry, mulberry32 } from '../engine/index.js';
+import { robotGeometry, mulberry32 } from '../engine';
 import { col, std, RM, WIRE_COLORS, YELLOW } from './materials.js';
-import type { Robot, Wiring } from '../sim/settings.js';
+import type { Robot, Wiring } from '../engine';
 
 function mkBox(w: number, h: number, d: number, mat: THREE.Material, x: number, y: number, z: number, parent?: THREE.Object3D): THREE.Mesh {
   const m = new THREE.Mesh(new THREE.BoxGeometry(w, h, d), mat); m.position.set(x, y, z); m.castShadow = true; if (parent) parent.add(m); return m;

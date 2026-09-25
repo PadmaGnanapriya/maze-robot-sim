@@ -8,8 +8,8 @@
  * Anything that doesn't fit falls back to the matching field in DEFAULTS
  * instead of failing the whole load - one bad field should not blank the app.
  */
-import { DEFAULT_ROBOT, DEFAULT_WIRING, type Robot, type Wiring, type Sonar } from '../engine/world.js';
-import type { MazeJSON, MazeType, GoalMode } from '../engine/maze.js';
+import { DEFAULT_ROBOT, DEFAULT_WIRING, type Robot, type Wiring, type Sonar } from '../engine';
+import type { MazeJSON, MazeType, GoalMode } from '../engine';
 
 // Robot/Wiring/Sonar/MazeType/GoalMode are engine/world.ts's and engine/maze.ts's
 // canonical shapes (world.ts owns DEFAULT_ROBOT/DEFAULT_WIRING); re-exported here so

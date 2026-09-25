@@ -5,7 +5,7 @@
 import * as THREE from 'three';
 import { col, SENSOR_HEX, YELLOW } from './materials.js';
 import type { WallEdge } from '../sim/SimController.js';
-import type { World } from '../engine/world.js';
+import type { World } from '../engine';
 
 interface BeamItem {
   holder: THREE.Group; cone: THREE.Mesh; mat: THREE.MeshBasicMaterial; line: THREE.Line; dot: THREE.Mesh;

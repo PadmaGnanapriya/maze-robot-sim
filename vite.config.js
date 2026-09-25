@@ -37,5 +37,13 @@ export default defineConfig({
     },
   ],
   define: { 'import.meta.env.VITE_REPO_URL': JSON.stringify(repoUrl) },
-  build: { chunkSizeWarningLimit: 1200 },
+  build: {
+    chunkSizeWarningLimit: 1200,
+    // Vite's modulepreload polyfill is an inline <script>, which the CSP above (script-src
+    // 'self', no 'unsafe-inline') would block outright - this build currently emits a single
+    // JS chunk so Vite doesn't inject it, but disable it explicitly so that stays true even
+    // if the build ever splits into multiple chunks (the polyfill only matters for browsers
+    // without native modulepreload support, which can't run this app's WebGL anyway).
+    modulePreload: { polyfill: false },
+  },
 });

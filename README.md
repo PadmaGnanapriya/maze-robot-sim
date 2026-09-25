@@ -6,7 +6,7 @@ A browser simulator for a three-sonar Arduino maze robot. You write ordinary Ard
 
 The robot is modelled on a real build: two clear acrylic plates on brass standoffs, yellow TT gear motors, a swivel caster, an 8 × AA pack, an Uno, an L298N and a lot of jumper wires.
 
-**Live demo:** `https://<your-user>.github.io/<repo-name>/` (after you deploy it, see below)
+**Live demo:** `https://PadmaGnanapriya.github.io/maze-robot-sim/`
 
 ## What it does
 

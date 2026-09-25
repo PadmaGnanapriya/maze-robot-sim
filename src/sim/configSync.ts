@@ -3,7 +3,7 @@
  * and SENSOR_SPAN and uses #define'd pins, so when the maze, robot or wiring change
  * the UI can offer to update those lines.
  */
-import type { Robot, Wiring } from './settings.js';
+import type { Robot, Wiring } from '../engine';
 
 export const PIN_DEFINES: [string, (w: Wiring) => number][] = [
   ['ENA', w => w.ENA], ['IN1', w => w.IN1], ['IN2', w => w.IN2], ['IN3', w => w.IN3], ['IN4', w => w.IN4], ['ENB', w => w.ENB],

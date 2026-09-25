@@ -6,7 +6,7 @@ import Telemetry from './Telemetry.js';
 import StatusChip from './StatusChip.js';
 import SolvedBanner from './SolvedBanner.js';
 import WelcomeCard from './WelcomeCard.js';
-import { Icon } from './Icons.js';
+import { Beams, Trail, Trash } from './icons-data.js';
 
 export default function Stage() {
   const sim = useSimController();
@@ -48,9 +48,9 @@ export default function Stage() {
           : <>Drag the robot or the white goal to move them. <kbd>Q</kbd> <kbd>E</kbd> or the scroll wheel rotate the robot while you hold it. Drag empty space to orbit, right-drag to pan.</>}
       </p>
       <div className="stage-tools">
-        <button className="btn icon" aria-pressed={ui.beams} onClick={toggle('beams')} title="Show sonar beams" aria-label="Show sonar beams"><Icon.Beams /></button>
-        <button className="btn icon" aria-pressed={ui.trail} onClick={toggle('trail')} title="Show the path driven" aria-label="Show the path driven"><Icon.Trail /></button>
-        <button className="btn icon" onClick={() => { sim.world.trail = []; }} title="Clear the path" aria-label="Clear the path"><Icon.Trash /></button>
+        <button className="btn icon" aria-pressed={ui.beams} onClick={toggle('beams')} title="Show sonar beams" aria-label="Show sonar beams"><Beams /></button>
+        <button className="btn icon" aria-pressed={ui.trail} onClick={toggle('trail')} title="Show the path driven" aria-label="Show the path driven"><Trail /></button>
+        <button className="btn icon" onClick={() => { sim.world.trail = []; }} title="Clear the path" aria-label="Clear the path"><Trash /></button>
       </div>
       <SolvedBanner />
       <WelcomeCard />

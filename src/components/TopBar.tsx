@@ -1,5 +1,6 @@
 import { useSimController, useSimState } from '../hooks/useSim.js';
-import { Icon, Logo } from './Icons.js';
+import { Dice, Pencil, Check, Upload, Play, Pause, Reset, Pin, Code, GitHub } from './icons-data.js';
+import { Logo } from './Icons.js';
 import type { MazeType, CameraView } from '../sim/settings.js';
 
 const MAZE_TYPES: [MazeType, string][] = [['backtracker', 'Long corridors'], ['prim', 'Many branches'], ['braid', 'With loops'], ['arena', 'Open arena']];
@@ -25,18 +26,18 @@ export default function TopBar({ panelOpen, onTogglePanel }: { panelOpen: boolea
         <select id="mazeType" className="sel" value={mz.type} onChange={e => sim.setMazeCfg({ type: e.target.value as MazeType })} title="Maze type">
           {MAZE_TYPES.map(([v, label]) => <option key={v} value={v}>{label}</option>)}
         </select>
-        <button className="btn" onClick={() => sim.newMaze()} title="Generate a new maze"><Icon.Dice /><span className="t-hide">New maze</span></button>
-        <button className="btn" aria-pressed={editWalls} onClick={() => sim.toggleEditWalls()} title="Click edges to add or remove walls"><Icon.Pencil /><span className="t-hide">Edit walls</span></button>
+        <button className="btn" onClick={() => sim.newMaze()} title="Generate a new maze"><Dice /><span className="t-hide">New maze</span></button>
+        <button className="btn" aria-pressed={editWalls} onClick={() => sim.toggleEditWalls()} title="Click edges to add or remove walls"><Pencil /><span className="t-hide">Edit walls</span></button>
       </div>
 
       <div className="grp" aria-label="Program">
-        <button className="btn" onClick={() => sim.verify()} title="Compile without running (Ctrl+S)"><Icon.Check /><span className="t-hide">Verify</span></button>
-        <button className="btn primary" onClick={() => sim.uploadAndRun()} title="Compile, upload to the simulated Uno and run (Ctrl+Enter)"><Icon.Upload />Upload &amp; run</button>
+        <button className="btn" onClick={() => sim.verify()} title="Compile without running (Ctrl+S)"><Check /><span className="t-hide">Verify</span></button>
+        <button className="btn primary" onClick={() => sim.uploadAndRun()} title="Compile, upload to the simulated Uno and run (Ctrl+Enter)"><Upload />Upload &amp; run</button>
         <button className="btn icon" disabled={!active} onClick={() => sim.togglePause()} aria-label={paused ? 'Resume' : 'Pause'} title={paused ? 'Resume (Space)' : 'Pause (Space)'}>
-          {paused ? <Icon.Play /> : <Icon.Pause />}
+          {paused ? <Play /> : <Pause />}
         </button>
-        <button className="btn icon" disabled={!hasProgram} onClick={() => sim.restart(false)} aria-label="Reset the Uno" title="Press the Uno's reset button: restart the sketch where the robot is"><Icon.Reset /></button>
-        <button className="btn" onClick={() => sim.backToStart()} title="Put the robot back on the start square (R)"><Icon.Pin /><span className="t-hide">Back to start</span></button>
+        <button className="btn icon" disabled={!hasProgram} onClick={() => sim.restart(false)} aria-label="Reset the Uno" title="Press the Uno's reset button: restart the sketch where the robot is"><Reset /></button>
+        <button className="btn" onClick={() => sim.backToStart()} title="Put the robot back on the start square (R)"><Pin /><span className="t-hide">Back to start</span></button>
       </div>
 
       <div className="grp">
@@ -54,8 +55,8 @@ export default function TopBar({ panelOpen, onTogglePanel }: { panelOpen: boolea
             <button key={v} aria-pressed={ui.view === v} title={title} onClick={() => sim.setUi({ view: v })}>{label}</button>
           ))}
         </div>
-        <button className="btn panel-toggle" aria-expanded={panelOpen} aria-controls="panel" onClick={onTogglePanel}><Icon.Code />Code</button>
-        {REPO_URL && <a className="btn icon quiet" href={REPO_URL} target="_blank" rel="noreferrer" aria-label="Source code on GitHub" title="Source code on GitHub"><Icon.GitHub /></a>}
+        <button className="btn panel-toggle" aria-expanded={panelOpen} aria-controls="panel" onClick={onTogglePanel}><Code />Code</button>
+        {REPO_URL && <a className="btn icon quiet" href={REPO_URL} target="_blank" rel="noreferrer" aria-label="Source code on GitHub" title="Source code on GitHub"><GitHub /></a>}
       </div>
     </header>
   );

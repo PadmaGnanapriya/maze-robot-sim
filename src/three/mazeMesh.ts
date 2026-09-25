@@ -5,7 +5,7 @@
  */
 import * as THREE from 'three';
 import { col, std, WALL, WALL_TOP, POST, YELLOW } from './materials.js';
-import type { Maze, GoalRect } from '../engine/maze.js';
+import type { Maze, GoalRect } from '../engine';
 
 export interface MazeMeshOptions { cell: number; wallT: number; wallH: number; floorHex: number; gridHex: number }
 export interface MazeParts {
